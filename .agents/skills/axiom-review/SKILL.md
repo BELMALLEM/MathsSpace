@@ -1,0 +1,33 @@
+---
+name: axiom-review
+description: Review AXIOM Math Universe changes for bugs and merge risk. Use when asked to review, audit, assess safety, or inspect a diff. Do not edit unless the user also asks for fixes.
+---
+
+# Review AXIOM Changes
+
+Review the actual diff and relevant surrounding code. Prioritize actionable defects over style preferences.
+
+Check for:
+
+- Incorrect math assumptions, formulas, proof/conjecture claims, parameter
+  bounds, challenge answers, or contextual feedback.
+- Catalogue/world integrity errors: duplicate IDs, missing related targets,
+  stale visible counts, impossible object placement, or broken region/galaxy
+  membership.
+- Navigation, gesture, picking, focus/leave, approach, pause, reduced-motion, or
+  localStorage regressions.
+- Three.js rendering leaks, unbounded object growth, expensive per-frame work,
+  missing disposal, broken instanced archive picking, or mobile performance
+  risks.
+- UI accessibility and responsive problems: unreadable labels, overlapping
+  panels, keyboard traps, missing focus states, unlabelled controls, or touch
+  interactions that cause accidental selection.
+- Static-app violations: backend assumptions, API keys, network imports, CDN
+  dependencies, framework migrations, or package additions without a clear need.
+- Tests that do not exercise changed behavior and docs that no longer match
+  setup, scope, counts, or limitations.
+
+Run read-only verification when useful. List findings first in severity order as
+`file:line - problem - impact - minimal fix`. Do not invent findings. If none
+exist, say so and mention residual testing gaps. End with the checks run and
+their results.

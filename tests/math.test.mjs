@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import{wave,waveAmplitude,secant,tangent,magnitude,volume,hypotenuse,branchCount,sampleBernoulli,seeded,validValues}from'../dist/math.js';
+import{discoveries}from'../dist/discoveries.js';
+const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} differs from ${b}`);
+test('equal opposite waves cancel pointwise, including negative positions',()=>{for(let x=-10;x<=10;x+=.13)close(wave(x,Math.PI),0);close(waveAmplitude(0),2);close(waveAmplitude(Math.PI),0)});
+test('secant algebra matches difference quotient and converges from negative and positive x',()=>{for(const x of[-2,-1,0,1,2])for(const h of[.02,.1,1.5]){close(secant(x,h),((x+h)**2-x*x)/h);close(secant(x,h)-tangent(x),h)}});
+test('right triangle and dimensional scaling relationships',()=>{close(hypotenuse(6,8),10);close(magnitude(-3,-4),5);close(volume(2,3,4,2),8*volume(2,3,4));close(volume(1,1,1,3),27);for(const a of[1,2,3.8])for(const b of[1,3,4])close(hypotenuse(a,b)**2,a*a+b*b)});
+test('finite recursion count matches explicit expansion',()=>{for(let d=0;d<=9;d++){let count=0;for(let k=0;k<=d;k++)count+=2**k;assert.equal(branchCount(d),count)}});
+test('Bernoulli trials respect boundaries and reproducible independent draws',()=>{assert.equal(sampleBernoulli(0,1000).hits,0);assert.equal(sampleBernoulli(1,1000).hits,1000);const r=sampleBernoulli(.5,10000,seeded(42));assert.equal(r.hits,r.values.filter(Boolean).length);assert.ok(r.hits>4700&&r.hits<5300)});
+test('restored experiment values clamp malformed and extreme input',()=>{const config=discoveries[0].controls;assert.equal(validValues(config,{phase:Infinity}).phase,70);assert.equal(validValues(config,{phase:-10}).phase,0);assert.equal(validValues(config,{phase:10000}).phase,360)});
+test('every discovery has valid controls, reasoning, an answer, and a real related destination',()=>{const ids=new Set(discoveries.map(d=>d.id));assert.equal(ids.size,32);for(const d of discoveries){assert.ok(ids.has(d.related));assert.ok(d.why.length>60);assert.ok(d.challenge.options[d.challenge.correct]);for(const c of d.controls){assert.ok(c.value>=c.min&&c.value<=c.max);assert.ok(c.step>0)}}});
