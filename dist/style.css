@@ -79,14 +79,43 @@ input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{fon
 .companion-top button{min-height:34px;padding:5px 9px;font-size:11px;border-color:#b4f2d533;color:var(--mint)}
 #companion p{margin:10px 0 0;color:#d5e0e9;font-size:13px;line-height:1.55}
 .journal-status{display:inline-block;margin-top:8px;color:var(--mint);font:11px monospace;letter-spacing:1px}
+#relayTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
+#relayTask h3{font-size:16px;margin:0 0 10px}
+#relayTask input{display:block;width:100%;margin-top:8px;padding:10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px}
+#relayTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
+#relayFeedback{color:var(--mint)}
+#courseTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
+#courseTask h3{font-size:16px;margin:0 0 10px}
+#courseTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
+#courseFeedback{color:var(--mint)}
+#recursionTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
+#recursionTask h3{font-size:16px;margin:0 0 10px}
+#recursionTask input{display:block;width:100%;margin-top:8px;padding:10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px}
+#recursionTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
+#goldenTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
+#goldenTask h3{font-size:16px;margin:0 0 10px}
+#goldenTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
+#recursionFeedback{color:var(--mint)}
+@media(min-width:701px){
+ #exploreIntro{top:112px}
+ #exploreIntro h1{font-size:40px;line-height:1.05;letter-spacing:0;margin:12px 0}
+ #exploreIntro p{margin:12px 0;line-height:1.6}
+}
+.mira-hidden #companion,.mira-hidden #miraLesson{display:none!important}
+#miraLesson{margin-top:14px;font-size:13px;color:var(--muted)}
+#miraLesson summary{cursor:pointer;color:var(--mint);padding:8px 0}
+#miraLesson summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.companion-top #companionDismiss{flex:none;width:44px;min-height:44px;padding:0;font-size:20px}
+.companion-top span{margin-right:auto}
 body.focus #routePanel,body.focus #companion,body.selected #routePanel{display:none}
 @media(max-width:1000px) and (min-width:701px){#routePanel{left:24px;width:270px}#companion{right:20px;width:260px;bottom:320px}}
 @media(max-height:600px) and (min-width:701px){#routePanel,#companion{display:none}}
 @media(max-width:700px){
  #routePanel{top:calc(338px + env(safe-area-inset-top));bottom:auto;left:16px;right:16px;width:auto;padding:10px 12px}
  #routePanel h2{display:none}#routeSteps{grid-template-columns:1fr 1fr;gap:5px}.route-step{min-height:33px;padding:6px 8px}.route-step span{font-size:12px}.route-step small{font-size:9px}
- #companion{top:calc(460px + env(safe-area-inset-top));bottom:auto;left:16px;right:16px;width:auto;padding:10px 12px}
+ #companion{top:calc(468px + env(safe-area-inset-top));bottom:auto;left:16px;right:16px;width:auto;padding:10px 12px}
  #companion p{font-size:12px;margin-top:7px}.companion-top button{min-height:32px}
  body.selected #companion{display:none}
 }
 @media(max-height:700px) and (max-width:700px){#routePanel,#companion{display:none}}
+@media(max-width:700px){body.flying #exploreIntro,body.flying #routePanel,body.flying #companion{display:none!important}}

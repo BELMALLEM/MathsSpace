@@ -1,5 +1,17 @@
 export const PHI=(1+Math.sqrt(5))/2;
 export const GOLDEN_ANGLE=360/(PHI*PHI);
+export function repeatedSpokes(angle,maxSpokes=12){
+ if(!Number.isFinite(angle)||!Number.isInteger(maxSpokes)||maxSpokes<2)return null;
+ const turn=((angle%360)+360)%360/360;
+ for(let q=2;q<=maxSpokes;q++){
+  const error=Math.abs(turn*q-Math.round(turn*q));
+  if(error<1e-4)return q;
+ }
+ return 0;
+}
+export function goldenMatch(angle,n,tolerance=.2){
+ return Number.isFinite(angle)&&Number.isFinite(n)&&n>=200&&n<=600&&Math.abs(angle-GOLDEN_ANGLE)<=tolerance&&repeatedSpokes(angle)===0;
+}
 export function birthdayChance(n){if(n>365)return 1;let different=1;for(let i=0;i<n;i++)different*=(365-i)/365;return 1-different}
 export function collatz(seed,limit=500){let n=seed;const values=[n];while(n!==1&&values.length<=limit){n=n%2===0?n/2:3*n+1;if(!Number.isSafeInteger(n))break;values.push(n)}return{values,steps:values.length-1,reachedOne:values.at(-1)===1,peak:Math.max(...values)}}
 export function harmonic(n){let total=0;for(let i=1;i<=n;i++)total+=1/i;return total}

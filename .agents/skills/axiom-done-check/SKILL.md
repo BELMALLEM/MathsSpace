@@ -11,18 +11,22 @@ Run only checks relevant to the changed flow. Never report an unrun check as pas
 2. Confirm the static app still uses `dist/` as source, local imports, vendored
    Three.js, and no new backend/API-key/CDN requirement unless explicitly
    requested.
-3. For content changes, verify discovery IDs, related targets, region
+3. Confirm the change did not add avoidable complexity: no unused abstraction,
+   duplicate system, speculative scaffold, dependency, build step, service, or
+   content volume without authored mathematical value.
+4. For content changes, verify discovery IDs, related targets, region
    membership, visible counts, parameter bounds, challenge correctness, and
    honest known/experiment/conjecture language.
-4. For math changes, verify formulas and edge cases with targeted tests.
-5. For world/rendering/navigation changes, exercise the changed path in the
+5. For math changes, verify formulas and edge cases with targeted tests.
+6. For world/rendering/navigation changes, exercise the changed path in the
    running app when browser tooling is available: first view, selection,
    approach/travel interruption, entering/leaving lessons, reduced motion, and
    relevant desktop/touch behavior.
-6. For UI changes, check responsive layout, keyboard operation, focus states,
+7. For UI changes, check responsive layout, keyboard operation, focus states,
    labels, panel overflow, readable text, and no incoherent overlap.
-7. Check console/server output for errors when a browser/server was used.
-8. Run `npm test` after code or content changes unless clearly blocked.
-9. Report `PASS`, `FAIL`, or `NOT APPLICABLE` for static architecture,
-   content/math integrity, changed flow, runtime errors, accessibility/UI, and
-   automated checks. A failure prevents a completion claim.
+8. Check console/server output for errors when a browser/server was used.
+9. Run `npm test` after code or content changes unless clearly blocked.
+10. Report `PASS`, `FAIL`, or `NOT APPLICABLE` for static architecture,
+   lean complexity, content/math integrity, changed flow, runtime errors,
+   accessibility/UI, and automated checks. A failure prevents a completion
+   claim.

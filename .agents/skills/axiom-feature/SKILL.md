@@ -9,6 +9,12 @@ Read `AGENTS.md`, `README.md`, `package.json`, `docs/prompt.md`, and
 `docs/RESUME_IN_VSCODE.md` before changing product behavior. Inspect the
 module that owns the feature and one adjacent example before editing.
 
+Apply AXIOM's Ponytail-adapted lean ladder before adding code: confirm the
+feature serves the current learner/game goal, reuse existing modules and lesson
+patterns, prefer native browser/Three.js/static-app capabilities, and then write
+the smallest complete slice. Do not create scaffolding for future features
+unless the current feature uses it.
+
 AXIOM is a static Three.js app. Preserve `dist/` as source, the vendored
 Three.js dependency, localStorage progress keys, and the existing local run
 command. Do not add a backend, framework, network import, account integration,
@@ -31,6 +37,10 @@ For new mathematical content, ship a complete authored slice:
 For world, navigation, picking, or UI features, preserve desktop and touch
 controls, reduced-motion behavior, focus/leave flow, resource disposal, and
 responsive layout. Keep the first screen polished and immediately explorable.
+
+For game-feel requests, ship one meaningful, replayable mathematical encounter
+before building generic systems. The slice should make curiosity productive:
+notice, investigate, predict, manipulate, observe, explain, and apply.
 
 Update README or docs when setup, visible scope, catalogue counts, limitations,
 or user-facing behavior changes. Run `npm test` after code/content changes and

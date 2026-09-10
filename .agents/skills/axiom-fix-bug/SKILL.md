@@ -9,6 +9,11 @@ Read `AGENTS.md`, the failing code, one related module, and the relevant test or
 configuration before editing. Reproduce the problem when practical; otherwise
 trace the concrete path from data to UI/rendering.
 
+Use the lean bug-fix rule: a report names a symptom. Grep callers of the shared
+function or state path you plan to touch, then fix the smallest root cause once.
+Do not add parallel guards, fallback systems, or broad refactors when one
+validated normalization point covers the bug.
+
 Classify the bug before fixing it:
 
 - authored content, catalogue/world placement, or stale counts;

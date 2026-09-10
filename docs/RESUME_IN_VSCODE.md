@@ -1,6 +1,64 @@
 # Continue AXIOM Locally
 
 ## Open and run
+Player-craft follow-up: player-ship.js adds a camera-relative scout with travel
+thrust and banking. Universe owns it; planet clearance includes its forward
+extent. Lessons/dialogs hide the ship. On phone, flight hides introductory
+overlays; Recenter restores the opening route. Tests and browser checks cover
+framing, thrust, banking, lesson visibility and resource disposal. This is a
+visible travel craft, not a completed piloting/docking progression system.
+
+Flight-interruption follow-up: stop now cancels autopilot and target tracking,
+not just velocity. Escape stops flight; blur no longer lets travel continue.
+Three regressions in navigation-flow.test.mjs cover cancellation, restarting
+travel, and preserving the return pose. Browser displacement checks passed.
+
+Relay follow-up (2026-09-10): a selectable Three.js station beside the Wave Garden
+has a phase-offset transfer puzzle in the lesson. A correct transmitted correction
+restores a persistent beacon to the unit-circle planet; retuning offers another
+seeded offset. State lives in understanding.waves.relay, connections in connected.
+Pure checks are in tests/relay.test.mjs; station geometry is relay-station.js.
+The catalogue and test counts are current evidence, never a cap on scope.
+
+Latest follow-up (2026-09-10): Mira is dismissible through a persistent Settings
+preference, with optional contextual lesson hints. First challenge predictions
+are preserved across retries; journal entries now include unbookmarked progress,
+takeaways, and unfinished questions. Answering does not imply observation or
+mastery. See the dated follow-up in QA_REPORT.md for checks and remaining gaps.
+The active direction includes immersion and mathematical actions that change
+the world; the full replayable first-region goal remains incomplete. The latest
+objective also calls for inspiration from space games: ships, characters,
+recognizable places, and effects that serve mathematical exploration. Prioritize
+an immersive first region over more catalogue entries; phone exploration is
+currently dominated by overlays. This supersedes older restrictions that would
+prevent meaningful game mechanics.
+
+AI setup follow-up: Ponytail's useful principle has been adapted as AXIOM's lean
+ladder in `AGENTS.md` and project skills. Future agents should reuse existing
+AXIOM modules, native browser APIs, vendored Three.js, and the static app shape
+before adding systems, dependencies, or copied scaffolding. Lean does not mean
+skipping math correctness, accessibility, saved-progress compatibility, visual
+QA, or the complete mathematical game loop.
+
+Scout scanner follow-up (2026-09-10): Circular Signal now has a second
+first-region encounter. After the relay is repaired, the player uses the
+existing unit-circle angle control to match a seeded scanner direction. The
+default target is 135 degrees, so signs/quadrants matter. A wrong bearing
+preserves the first prediction; a correct bearing records a connection to
+fractals and reveals a violet Three.js route beam. Opening the scanner before
+repair disables transmission and offers a shortcut back to Wave Garden. Tests
+and DevTools checks passed; physical touch, long-session performance and the
+complete 15-20 minute newcomer route are still not verified.
+
+Recursion lock follow-up (2026-09-10): Fractals now applies recursion as
+gameplay. After scanner calibration, the player must count the finite binary
+tree at depth 4 and transmit 31 segments. Wrong counts preserve the first
+prediction; a correct count records `fractals.connected=["golden"]` and makes
+the main route point to the Golden-angle surprise. Opening Fractals too early
+shows the prerequisite and routes back to Circular Signal. Tests and DevTools
+checks passed; physical touch, sustained performance, every post-golden route
+and real newcomer playtest remain unverified.
+
 Open this repository folder in VS Code.
 
 Requirements: Python 3 to serve locally; Node.js 20+ to run tests.

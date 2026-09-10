@@ -7,6 +7,10 @@ description: Review AXIOM Math Universe changes for bugs and merge risk. Use whe
 
 Review the actual diff and relevant surrounding code. Prioritize actionable defects over style preferences.
 
+If the user asks for cleanup, simplification, or Ponytail-style review, also use
+`axiom-lean-review`. Otherwise include only complexity findings that create real
+merge risk for AXIOM.
+
 Check for:
 
 - Incorrect math assumptions, formulas, proof/conjecture claims, parameter
@@ -24,6 +28,8 @@ Check for:
   interactions that cause accidental selection.
 - Static-app violations: backend assumptions, API keys, network imports, CDN
   dependencies, framework migrations, or package additions without a clear need.
+- Over-built changes that duplicate an existing AXIOM flow, add a one-use
+  abstraction, or create generic game machinery without mathematical payoff.
 - Tests that do not exercise changed behavior and docs that no longer match
   setup, scope, counts, or limitations.
 

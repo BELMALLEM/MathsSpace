@@ -79,9 +79,21 @@ second app, migrate to a framework, or split files only for tidiness.
 - Read `README.md`, `package.json`, `docs/prompt.md`,
   `docs/PROJECT_BRIEF.md`, `docs/QA_REPORT.md`, `docs/RESUME_IN_VSCODE.md`,
   the target file, and a nearby related module before non-trivial changes.
+- Before writing code, use the AXIOM lean ladder, adapted from Ponytail's
+  "lazy senior dev" principle: skip work that does not serve the current
+  learner-facing goal; reuse an existing helper, module, content pattern, or
+  platform feature before inventing a new one; use local ES modules and native
+  browser APIs before dependencies; only then write the smallest complete
+  change.
 - Keep changes focused and incremental. Preserve visual identity, storage keys,
   public run commands, module boundaries, and existing authored content unless
   the requested change depends on updating them.
+- Prefer deletion, simplification, and consolidation when they improve clarity
+  or remove stale copied setup. Do not add abstractions, config, scaffolds,
+  plugin files, or "future" layers with one caller or no immediate use.
+- The smallest diff is only correct after understanding the flow. Trace callers
+  and state paths before editing shared logic; fix root causes once instead of
+  patching each symptom.
 - Treat math correctness as product behavior. New or changed formulas need
   tests and clear assumptions.
 - Keep content bounded and honest. Do not imply infinite curriculum, real
@@ -94,6 +106,9 @@ second app, migrate to a framework, or split files only for tidiness.
   is source, so it is appropriate to edit files there.
 - Keep comments rare and useful; explain non-obvious constraints rather than
   restating code.
+- If taking a deliberate shortcut with a known ceiling, mark it with
+  `axiom-lean:` and name the trigger for revisiting it. Example:
+  `// axiom-lean: linear scan is fine below 1000 bodies; index if region counts grow.`
 
 ## Feature Work
 
@@ -108,6 +123,12 @@ For new discoveries or experiments, implement the complete learning slice:
 - meaningful related discovery;
 - tests for formulas, bounds, catalogue integrity, and drawing behavior.
 
+For game-feel requests, ship one meaningful, replayable mathematical encounter
+before building generic systems. The slice should make curiosity productive:
+notice -> investigate -> predict -> manipulate -> observe -> explain -> apply.
+More objects are not progress unless they create authored mathematical meaning
+or a useful player choice.
+
 Update visible counts and documentation when the authored catalogue changes.
 Keep asteroid archives as bounded parameter variations, not unlimited unique
 subjects.
@@ -118,6 +139,10 @@ Trace or reproduce the bug before editing when practical. Identify whether the
 root cause is content data, pure math, navigation, picking, rendering, UI state,
 localStorage, or responsive CSS. Fix the smallest cause and add a regression
 test where the repository has a viable seam.
+
+For shared helpers, grep callers before editing. One validated guard or
+normalization point is better than several UI-side patches, provided it
+preserves existing saved progress and authored behavior.
 
 ## Verification
 
@@ -146,3 +171,8 @@ When reviewing changes, prioritize bugs and merge risk:
 - new external services, network imports, backend assumptions, API keys, or
   dependencies that violate the static app constraint;
 - tests or docs that no longer match behavior.
+
+Also run a lean-complexity pass when asked to simplify or clean house: find
+duplicated systems, unused flexibility, unnecessary dependencies, speculative
+abstractions, and code that native browser APIs or existing modules already
+cover. Complexity findings should name the deletion or replacement directly.

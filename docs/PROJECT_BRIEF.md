@@ -33,6 +33,8 @@ to exploration without confusion or lost state.
   orbiting bodies, catchable archives, and interruption-friendly travel.
 - Keep Three.js responsibilities in `universe.js`, `living-space.js`,
   `orbits.js`, and `world.js`.
+- Apply the lean ladder before building: reuse the existing owner module or
+  browser/Three.js capability before adding a new system.
 - Avoid unbounded objects, per-frame allocation loops, hidden memory growth, and
   rendering work that scales with session length.
 - Verify changes with real browser checks when touching camera movement,
@@ -149,6 +151,8 @@ Highest priority gaps to investigate or improve next:
 - Duplicated navigation systems or mobile button pads alongside gestures.
 - Large refactors that split small modules without improving correctness,
   performance, or comprehension.
+- AI/plugin setup copied from other projects unless it is adapted to AXIOM's
+  static app, mathematical content, browser QA, and existing skills.
 
 ## Completion Gates
 
@@ -181,6 +185,9 @@ Apply the 80/20 rule: prioritize learner clarity, smooth exploration,
 mathematical correctness, and reliable local behavior. Avoid overengineering,
 duplicated systems, speculative features, unnecessary dependencies, and docs
 that do not keep decisions, commands, evidence, or project status accurate.
+Use the AXIOM lean ladder from `AGENTS.md`: first ask whether the work serves
+the goal, then reuse existing modules and native/static capabilities, then write
+the minimum complete change.
 
 Never infer success from code alone. Use real command outputs, local server
 behavior, browser console evidence, responsive inspection, and focused tests.
