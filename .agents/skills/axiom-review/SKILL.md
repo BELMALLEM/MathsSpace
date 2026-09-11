@@ -1,15 +1,15 @@
 ---
 name: axiom-review
-description: Review AXIOM Math Universe changes for bugs and merge risk. Use when asked to review, audit, assess safety, or inspect a diff. Do not edit unless the user also asks for fixes.
+description: Review MathsGalaxy, formerly AXIOM Math Universe, changes for bugs and merge risk. Use when asked to review, audit, assess safety, or inspect a diff. Do not edit unless the user also asks for fixes.
 ---
 
-# Review AXIOM Changes
+# Review MathsGalaxy Changes
 
 Review the actual diff and relevant surrounding code. Prioritize actionable defects over style preferences.
 
 If the user asks for cleanup, simplification, or Ponytail-style review, also use
 `axiom-lean-review`. Otherwise include only complexity findings that create real
-merge risk for AXIOM.
+merge risk for MathsGalaxy.
 
 Check for:
 
@@ -28,7 +28,7 @@ Check for:
   interactions that cause accidental selection.
 - Static-app violations: backend assumptions, API keys, network imports, CDN
   dependencies, framework migrations, or package additions without a clear need.
-- Over-built changes that duplicate an existing AXIOM flow, add a one-use
+- Over-built changes that duplicate an existing MathsGalaxy flow, add a one-use
   abstraction, or create generic game machinery without mathematical payoff.
 - Tests that do not exercise changed behavior and docs that no longer match
   setup, scope, counts, or limitations.

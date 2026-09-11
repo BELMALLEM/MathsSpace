@@ -1,6 +1,6 @@
-# AXIOM — A universe of ideas
+# MathsGalaxy - A universe of ideas
 
-An explorable Three.js mathematical universe with **32 complete discoveries across eight solar systems in three galaxies**. Stars, planets, moons and asteroids are independently selectable learning destinations. Each has a preview, contextual guidance, a working experiment and a challenge. Catchable travelling archives offer bounded parameter variations of eight curated mathematical curiosities.
+An explorable Three.js mathematical universe, formerly AXIOM Math Universe, with **32 complete discoveries across eight playable solar systems** plus five honest frontier territories that signal the larger mathematical map. Stars, planets, moons and asteroids are independently selectable learning destinations. Each completed discovery has a preview, contextual guidance, a working experiment and a challenge. Catchable travelling archives offer bounded parameter variations of eight curated mathematical curiosities.
 
 ## Run
 Serve `dist/` with any static HTTP server. Local example: `python3 -m http.server 8000 --directory dist`. Run checks with `node --test tests/*.test.mjs` or `npm test` using Node 20+. No build step, network imports, API keys, or accounts are required. Vendored Three.js 0.170.0 includes its MIT license.
@@ -26,6 +26,9 @@ remains available before repair.
 - Connected Frontier: vector addition, determinants, weighted shortest paths, modular arithmetic.
 - Golden Horizon in Aurelia: Fibonacci ratios and complex multiplication.
 - Butterfly Wake in Umbra: deterministic chaos and Fourier synthesis.
+- Frontier territories: number theory, logic and foundations, topology,
+  computation and complexity, and deeper analysis. These are visible in the
+  Atlas and world as distant signals, not completed lessons.
 - Eight rare archives throughout the systems: birthday paradox, Monty Hall, Collatz conjecture, golden-angle patterns, Euler’s polyhedron formula, harmonic series, prime spirals, and pigeonhole principle.
 
 ## Architecture
@@ -42,11 +45,13 @@ remains available before repair.
 - `style.css`: responsive exploration and learning interfaces.
 
 ## Project guidance
-Read `AGENTS.md`, `docs/prompt.md`, `docs/PROJECT_BRIEF.md`,
-`docs/QA_REPORT.md`, and `docs/RESUME_IN_VSCODE.md` before substantial
-changes. `docs/PROJECT_BRIEF.md` captures the AXIOM-specific team rules, UX
-routes, missing experience, risks, and milestone gates. `docs/QA_REPORT.md`
-records the latest browser QA evidence and remaining verification gaps.
+Read `AGENTS.md`, `docs/context.md`, `docs/design.md`,
+`docs/instructions.md`, `docs/QA_REPORT.md`, and
+`docs/RESUME_IN_VSCODE.md` before substantial changes. `docs/prompt.md` is the
+current goal prompt first, with historical input below; `docs/PROJECT_BRIEF.md`
+is deeper milestone context.
+Ponytail is integrated as a lean working principle in the current instructions,
+not kept as a separate copied setup.
 
 ## Navigation
 A visible scout craft now accompanies exploration, with thrust responding to
@@ -66,7 +71,14 @@ Touch: one finger looks, pinching travels, and two-finger dragging pans. Tap pre
 Navigation uses frame-rate-independent acceleration/braking and camera damping, normalized multi-axis speed, proximity slowdown, camera surface clearance and restoration of the exploration pose when leaving focus. Region travel is interruptible with drag, movement, wheel or touch input.
 
 ## Rendering and scope
-The universe contains 32 authored destinations, 224 moving archive asteroids on mobile or 416 on desktop, and three spiral galaxy point fields. Asteroid bodies share geometry and use instanced rendering. Detail selection is based on initial viewport width. Counts remain bounded during long sessions; off-region asteroid fields stop matrix uploads. Planets follow display orbits; moons follow their parent planets. Stars drift slightly and their atmospheres pulse. These motions are stylized and do not constitute a gravitational simulation.
+The universe contains 32 authored destinations, five unmapped frontier
+territories, 224 moving archive asteroids on mobile or 416 on desktop, and four
+spiral galaxy point fields. Asteroid bodies share geometry and use instanced
+rendering. Detail selection is based on initial viewport width. Counts remain
+bounded during long sessions; off-region asteroid fields stop matrix uploads.
+Planets follow display orbits; moons follow their parent planets. Stars drift
+slightly and their atmospheres pulse. These motions are stylized and do not
+constitute a gravitational simulation.
 
 Select an asteroid directly or through the passing-archive signal. Approach tracks the moving target until interrupted. Catch & explore opens its lesson with a deterministic variation and records the catch on this device. Asteroid instances are not hundreds of unique authored subjects: eight rare topic families generate bounded parameter variations. The Atlas exposes all 32 subjects without requiring catches.
 

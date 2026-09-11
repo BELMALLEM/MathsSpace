@@ -1,4 +1,26 @@
-# Continue AXIOM Locally
+# Continue MathsGalaxy Locally
+
+Future-agent context was consolidated into `docs/context.md`, `docs/design.md`,
+and `docs/instructions.md`. Read those with `AGENTS.md` before substantial work.
+Ponytail's useful "lazy senior engineer" principle is integrated into the
+MathsGalaxy setup there; do not maintain a separate copied Ponytail setup.
+The old AXIOM name remains in compatibility details such as skill names and
+`axiom-*-v1` localStorage keys.
+
+Frontier breadth follow-up (2026-09-11): MathsGalaxy now shows 13 Atlas
+territories: eight playable systems with 32 authored discoveries plus five
+honest frontier regions for number theory, logic/foundations, topology,
+computation/complexity, and deeper analysis. These are distant signals with
+Scan frontier travel, not completed lessons. Tests pass 45/45; Chrome mobile
+Atlas check found five frontier cards, no console warnings/errors, and no
+horizontal overflow. Long-session performance and real player perception remain
+unverified.
+
+Mobile UX follow-up (2026-09-10): exploration overlays are more compact at
+390x844, and the active lesson task is promoted above secondary explanation
+content so Wave Garden opens with the relay repair action visible. Lighthouse
+scored 100 across mobile and desktop categories; 44 tests pass. Physical touch,
+sustained frame pacing, and a real newcomer route remain unverified.
 
 ## Open and run
 Player-craft follow-up: player-ship.js adds a camera-relative scout with travel
@@ -33,12 +55,13 @@ an immersive first region over more catalogue entries; phone exploration is
 currently dominated by overlays. This supersedes older restrictions that would
 prevent meaningful game mechanics.
 
-AI setup follow-up: Ponytail's useful principle has been adapted as AXIOM's lean
-ladder in `AGENTS.md` and project skills. Future agents should reuse existing
-AXIOM modules, native browser APIs, vendored Three.js, and the static app shape
-before adding systems, dependencies, or copied scaffolding. Lean does not mean
-skipping math correctness, accessibility, saved-progress compatibility, visual
-QA, or the complete mathematical game loop.
+AI setup follow-up: Ponytail's useful principle has been integrated as the
+MathsGalaxy lean working style in `AGENTS.md`, `docs/instructions.md`, and
+project skills. Future agents should reuse existing modules, native browser
+APIs, vendored Three.js, and the static app shape before adding systems,
+dependencies, or copied scaffolding. Lean does not mean skipping math
+correctness, accessibility, saved-progress compatibility, visual QA, KPIs, or
+the complete mathematical game loop.
 
 Scout scanner follow-up (2026-09-10): Circular Signal now has a second
 first-region encounter. After the relay is repaired, the player uses the
@@ -73,10 +96,10 @@ In a second terminal run `npm test`. No npm install or build is needed for the e
 
 ## Paste this into your local coding assistant
 
-Continue the existing AXIOM project in this open workspace. Read `AGENTS.md`, `README.md`, `package.json`, `docs/prompt.md`, `docs/PROJECT_BRIEF.md`, `docs/QA_REPORT.md`, and this handoff before making changes. Inspect the actual code and run the existing tests before claiming its state. This is an existing working project: preserve its visual identity and architecture; do not scaffold a replacement.
+Continue the existing MathsGalaxy project in this open workspace. Read `AGENTS.md`, `docs/context.md`, `docs/design.md`, `docs/instructions.md`, `docs/QA_REPORT.md`, and this handoff before making changes. Use `README.md`, `package.json`, `docs/prompt.md`, and `docs/PROJECT_BRIEF.md` as supporting context when needed. Inspect the actual code and run the existing tests before claiming its state. This is an existing working project: preserve its architecture; do not scaffold a replacement.
 
 Product vision:
-AXIOM is a playful, highly visual, interactive Three.js universe for understanding mathematics. The main activity is exploring outer space and manipulating mathematical ideas. It should feel alive, intuitive, spacious and enjoyable, with a clean interface on desktop and mobile. Avoid academic textbook screens and generic game tasks. Make abstraction tangible: let learners change something, observe an effect, receive contextual guidance, and understand why it happens. Clearly distinguish experiments, proofs and conjectures.
+MathsGalaxy is a playful, highly visual, interactive Three.js universe for understanding mathematics. The main activity is exploring outer space and manipulating mathematical ideas. It should feel alive, intuitive, spacious and enjoyable, with a clean interface on desktop and mobile. Avoid academic textbook screens and generic game tasks. Make abstraction tangible: let learners change something, observe an effect, receive contextual guidance, and understand why it happens. Clearly distinguish experiments, proofs and conjectures.
 
 Current source baseline:
 V4. package.json currently says 1.3.0; V4 is the release label.

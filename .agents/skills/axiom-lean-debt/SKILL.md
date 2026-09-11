@@ -1,9 +1,9 @@
 ---
 name: axiom-lean-debt
-description: Collect AXIOM's deliberate lean shortcuts marked with `axiom-lean:` comments into a debt ledger. Use when asked what shortcuts were deferred or what lean debt remains. Does not edit unless explicitly asked to write the ledger.
+description: Collect MathsGalaxy's deliberate lean shortcuts marked with `axiom-lean:` comments into a debt ledger. Use when asked what shortcuts were deferred or what lean debt remains. Does not edit unless explicitly asked to write the ledger.
 ---
 
-# Collect AXIOM Lean Debt
+# Collect MathsGalaxy Lean Debt
 
 Search the repo for `axiom-lean:` comment markers, excluding `.git`,
 `node_modules`, and generated caches. Each marker should name the shortcut's
