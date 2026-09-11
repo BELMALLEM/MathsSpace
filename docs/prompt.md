@@ -77,6 +77,7 @@ The world should feel alive and explorable:
   support exploration or mathematics;
 - bounded randomness that creates curiosity without making essential learning
   depend on luck.
+- You may use the following reference for Maths possible routes and 'reference button' : https://mathworld.wolfram.com/
 
 Avoid empty travel, random content with no mathematical role, decorative-only
 objects, and lessons that are just panels with sliders.
