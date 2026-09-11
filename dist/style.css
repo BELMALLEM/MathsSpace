@@ -141,3 +141,5 @@ body.focus #routePanel,body.focus #companion,body.selected #routePanel{display:n
  body.focus #guideBody>#depthContent{order:4}
  body.focus #guideBody>.guide-bottom{order:5}
 }
+.brand-credit{font:10px/1.4 monospace;letter-spacing:1.5px;color:var(--muted);margin-left:2px;white-space:nowrap}.creator-credit{border-top:1px solid var(--line);margin:24px 0 0;padding-top:18px;color:var(--muted);font:11px monospace;letter-spacing:1px}.creator-credit strong{color:var(--ink);font-weight:400}
+@media(max-width:700px){.brand-credit{display:none}}

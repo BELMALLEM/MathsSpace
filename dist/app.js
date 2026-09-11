@@ -148,6 +148,8 @@ $('#showMira').onchange=e=>{prefs.miraHidden=!e.target.checked;setMira();write('
 setMira();
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>$('#toast').classList.remove('visible'),3600)}
 function modal(id){clearSelection();universe?.stop();document.querySelectorAll('dialog[open]').forEach(d=>d.close());$(id).showModal()}
+function returnToSpace(){universe?.stop();document.querySelectorAll('dialog[open]').forEach(d=>d.close());if(current)leave();clearSelection();document.body.classList.remove('flying')}
+$('#brand').onclick=e=>{e.preventDefault();returnToSpace()};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));
 function setAmbient(){if(universe)universe.motion=ambient;$('#motionBtn').textContent=ambient?'Motion on':'Motion off';$('#reduceMotion').checked=!ambient;prefs.reduced=!ambient;}
 $('#motionBtn').onclick=()=>{ambient=!ambient;setAmbient();write('axiom-prefs-v1',prefs)};$('#reduceMotion').onchange=e=>{ambient=!e.target.checked;setAmbient();write('axiom-prefs-v1',prefs)};
