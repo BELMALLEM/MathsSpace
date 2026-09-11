@@ -1,18 +1,25 @@
-# AXIOM agent guide
+# MathsGalaxy agent guide
 
 ## Project
 
-This repository contains AXIOM Math Universe, a static Three.js web app for
-learning mathematics through 3D exploration.
+This repository contains MathsGalaxy, formerly AXIOM Math Universe: a static
+Three.js web app for learning mathematics through 3D exploration. Use
+MathsGalaxy for player-facing product identity. Keep existing AXIOM-flavored
+file names, skill names, and `axiom-*-v1` storage keys for compatibility unless
+the user explicitly asks for a migration.
 
 - `dist/` is the editable application source, not disposable build output.
 - `dist/vendor/three.module.js` is vendored Three.js 0.170.0; keep its MIT
   license file beside it.
 - `tests/` uses Node's built-in test runner for math, navigation, rendering
   logic, expansion, and living-space behavior.
-- `docs/prompt.md` records the product vision and starting prompt.
-- `docs/PROJECT_BRIEF.md` adapts the operating goal, team rules, routes,
-  missing experience, misleading claims, and milestone gates to AXIOM.
+- `docs/context.md` is the compact current-state reference for future agents.
+- `docs/design.md` is the player-facing MathsGalaxy design direction.
+- `docs/instructions.md` is the practical future-agent operating contract.
+- `docs/prompt.md` is the current goal prompt first, with older AXIOM prompt
+  material retained below as superseded history.
+- `docs/PROJECT_BRIEF.md` keeps deeper milestone context, team rules, routes,
+  missing experience, misleading claims, and gates.
 - `docs/QA_REPORT.md` records the latest browser QA evidence and remaining
   verification gaps.
 - `docs/RESUME_IN_VSCODE.md` records local handoff notes and known QA gaps.
@@ -37,8 +44,8 @@ the existing static setup cannot solve the problem.
 
 ## Product Direction
 
-AXIOM should feel like a living mathematical universe, not a textbook page or a
-generic game shell. Preserve the current identity:
+MathsGalaxy should feel like a living mathematical universe, not a textbook
+page or a generic game shell. Preserve the current identity:
 
 - playful, curious, clear, visual, and polished;
 - outer-space exploration with stars, planets, moons, galaxies, moving archive
@@ -53,6 +60,12 @@ generic game shell. Preserve the current identity:
 Use Three.js for the primary 3D world. Keep the first screen immediately usable:
 the user should understand that they can explore, select, approach, and learn
 without reading a long manual.
+
+Current user priority: MathsGalaxy must feel mathematically large, not like a
+small demo. Show breadth across many mathematical families early, even while
+only selected routes are deeply playable. Pair wide visible scope with honest
+states for unfinished regions and one or more deep routes where mathematics
+changes what the player can do.
 
 ## Architecture
 
@@ -79,12 +92,17 @@ second app, migrate to a framework, or split files only for tidiness.
 - Read `README.md`, `package.json`, `docs/prompt.md`,
   `docs/PROJECT_BRIEF.md`, `docs/QA_REPORT.md`, `docs/RESUME_IN_VSCODE.md`,
   the target file, and a nearby related module before non-trivial changes.
-- Before writing code, use the AXIOM lean ladder, adapted from Ponytail's
-  "lazy senior dev" principle: skip work that does not serve the current
-  learner-facing goal; reuse an existing helper, module, content pattern, or
+- Before writing code, use the integrated Ponytail principle described in
+  `docs/instructions.md`: skip work that does not serve the current player or
+  mathematical goal; reuse an existing helper, module, content pattern, or
   platform feature before inventing a new one; use local ES modules and native
   browser APIs before dependencies; only then write the smallest complete
-  change.
+  change. Apply the 80/20 rule: prioritize high-impact player and project value
+  over small polish, repeated audits, or token-expensive checks. Do not keep a
+  separate copied Ponytail setup.
+- When the user signals a pain point or priority, document it in
+  `docs/context.md` and, when relevant, `docs/design.md` or
+  `docs/instructions.md` so future runs inherit it.
 - Keep changes focused and incremental. Preserve visual identity, storage keys,
   public run commands, module boundaries, and existing authored content unless
   the requested change depends on updating them.

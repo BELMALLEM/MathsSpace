@@ -1,13 +1,14 @@
 ---
 name: axiom-done-check
-description: Verify that completed AXIOM Math Universe work is genuinely ready. Use before declaring feature, bug-fix, navigation, rendering, lesson, experiment, or customer-visible UI work done. Do not use for docs-only or review-only tasks.
+description: Verify that completed MathsGalaxy, formerly AXIOM Math Universe, work is genuinely ready. Use before declaring feature, bug-fix, navigation, rendering, lesson, experiment, or customer-visible UI work done. Do not use for docs-only or review-only tasks.
 ---
 
-# Verify AXIOM Completion
+# Verify MathsGalaxy Completion
 
 Run only checks relevant to the changed flow. Never report an unrun check as passing.
 
-1. Read `AGENTS.md`, the changed files, and relevant docs.
+1. Read `AGENTS.md`, `docs/context.md`, `docs/design.md`,
+   `docs/instructions.md`, the changed files, and relevant docs.
 2. Confirm the static app still uses `dist/` as source, local imports, vendored
    Three.js, and no new backend/API-key/CDN requirement unless explicitly
    requested.

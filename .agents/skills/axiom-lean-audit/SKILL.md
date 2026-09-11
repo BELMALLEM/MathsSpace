@@ -1,16 +1,16 @@
 ---
 name: axiom-lean-audit
-description: Whole-repo AXIOM audit for bloat, stale copied setup, unnecessary dependencies, speculative abstractions, and duplicated systems. Produces a ranked report and does not apply fixes.
+description: Whole-repo MathsGalaxy audit for bloat, stale copied setup, unnecessary dependencies, speculative abstractions, and duplicated systems. Produces a ranked report and does not apply fixes.
 ---
 
-# Audit AXIOM For Lean Complexity
+# Audit MathsGalaxy For Lean Complexity
 
-Scan the repository for work AXIOM can avoid owning. Rank the biggest practical
-cleanup opportunities first.
+Scan the repository for work MathsGalaxy can avoid owning. Rank the biggest
+practical cleanup opportunities first.
 
 Focus on:
 
-- stale copied AI setup, docs, or plugin fragments that contradict AXIOM;
+- stale copied AI setup, docs, or plugin fragments that contradict MathsGalaxy;
 - dependencies, generated caches, build assumptions, or services outside the
   static Three.js architecture;
 - duplicate modules or flows for navigation, lessons, experiments, journal,

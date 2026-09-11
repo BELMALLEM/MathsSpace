@@ -1,13 +1,14 @@
 ---
 name: axiom-fix-bug
-description: Diagnose and fix a bug in AXIOM Math Universe. Use for regressions in math logic, Three.js rendering, navigation, picking, lessons, journal/localStorage, responsive UI, or tests. Do not use for new features or review-only requests.
+description: Diagnose and fix a bug in MathsGalaxy, formerly AXIOM Math Universe. Use for regressions in math logic, Three.js rendering, navigation, picking, lessons, journal/localStorage, responsive UI, or tests. Do not use for new features or review-only requests.
 ---
 
-# Fix an AXIOM Bug
+# Fix a MathsGalaxy Bug
 
-Read `AGENTS.md`, the failing code, one related module, and the relevant test or
-configuration before editing. Reproduce the problem when practical; otherwise
-trace the concrete path from data to UI/rendering.
+Read `AGENTS.md`, `docs/context.md`, `docs/instructions.md`, the failing code,
+one related module, and the relevant test or configuration before editing.
+Reproduce the problem when practical; otherwise trace the concrete path from
+data to UI/rendering.
 
 Use the lean bug-fix rule: a report names a symptom. Grep callers of the shared
 function or state path you plan to touch, then fix the smallest root cause once.

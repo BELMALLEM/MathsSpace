@@ -1,21 +1,23 @@
 ---
 name: axiom-feature
-description: Implement a feature end-to-end in AXIOM Math Universe. Use for new discoveries, experiments, world behavior, navigation, Atlas/journal UI, or learning interactions. Do not use for review-only or documentation-only requests.
+description: Implement a feature end-to-end in MathsGalaxy, formerly AXIOM Math Universe. Use for new discoveries, experiments, world behavior, navigation, Atlas/journal UI, or learning interactions. Do not use for review-only or documentation-only requests.
 ---
 
-# Build an AXIOM Feature
+# Build a MathsGalaxy Feature
 
-Read `AGENTS.md`, `README.md`, `package.json`, `docs/prompt.md`, and
-`docs/RESUME_IN_VSCODE.md` before changing product behavior. Inspect the
-module that owns the feature and one adjacent example before editing.
+Read `AGENTS.md`, `docs/context.md`, `docs/design.md`,
+`docs/instructions.md`, `docs/QA_REPORT.md`, and
+`docs/RESUME_IN_VSCODE.md` before changing product behavior. Use
+`docs/prompt.md` as historical context. Inspect the module that owns the
+feature and one adjacent example before editing.
 
-Apply AXIOM's Ponytail-adapted lean ladder before adding code: confirm the
-feature serves the current learner/game goal, reuse existing modules and lesson
+Apply the integrated Ponytail principle before adding code: confirm the feature
+serves the current player/mathematical goal, reuse existing modules and lesson
 patterns, prefer native browser/Three.js/static-app capabilities, and then write
 the smallest complete slice. Do not create scaffolding for future features
 unless the current feature uses it.
 
-AXIOM is a static Three.js app. Preserve `dist/` as source, the vendored
+MathsGalaxy is a static Three.js app. Preserve `dist/` as source, the vendored
 Three.js dependency, localStorage progress keys, and the existing local run
 command. Do not add a backend, framework, network import, account integration,
 or package dependency unless the user explicitly asks or the feature cannot be

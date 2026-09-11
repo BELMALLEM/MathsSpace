@@ -1,15 +1,18 @@
-# AXIOM Project Brief
+# MathsGalaxy Project Brief
 
-This brief adapts the earlier production-readiness template to AXIOM only. This project is a static Three.js learning app.
+This brief is retained as deeper milestone context for MathsGalaxy, formerly
+AXIOM Math Universe. For routine future work, read `context.md`, `design.md`,
+and `instructions.md` first; they are the compact current contract. This file
+adds fuller team rules, risks, and gates.
 
 ## Target Outcome
 
-Deliver AXIOM as a polished interactive prototype of a mathematical universe:
-fast to open, easy to understand, playful without becoming noisy, mathematically
-honest, and reliable on desktop and mobile. A learner should be able to fly
-through space, select a mathematical object, approach it, explore a visual
-experiment, save discoveries locally, catch rare archive variants, and return
-to exploration without confusion or lost state.
+Deliver MathsGalaxy as a polished interactive prototype of a mathematical
+universe: fast to open, easy to understand, playful without becoming noisy,
+mathematically honest, and reliable on desktop and mobile. A learner should be
+able to fly through space, select a mathematical object, approach it, explore a
+visual experiment, save discoveries locally, catch rare archive variants, and
+return to exploration without confusion or lost state.
 
 ## Existing Evidence
 
@@ -19,7 +22,8 @@ to exploration without confusion or lost state.
 - The current catalogue claims 32 discoveries across eight regions and three
   galaxies.
 - Rare archive asteroids are bounded parameter variations of eight topics.
-- Progress uses localStorage keys with the `axiom-*-v1` prefix.
+- Progress uses localStorage keys with the `axiom-*-v1` prefix. Keep them stable
+  unless an explicit migration is requested.
 - Automated tests cover math, navigation helpers, catalogue integrity,
   rendering operations, and living-space behavior.
 - Browser visual QA and performance measurement are known gaps until performed
@@ -88,8 +92,8 @@ to exploration without confusion or lost state.
 
 ## Product Routes
 
-AXIOM has routes in the UX sense, not framework routes. The app is a single
-static page at `dist/index.html`.
+MathsGalaxy has routes in the UX sense, not framework routes. The app is a
+single static page at `dist/index.html`.
 
 - Exploration route: load app -> see world -> move camera -> inspect nearby
   discoveries.
@@ -110,8 +114,8 @@ static page at `dist/index.html`.
 
 ## Misleading Elements To Avoid
 
-- Do not claim AXIOM is production-complete because tests pass. Browser visual
-  QA and performance measurement are separate evidence.
+- Do not claim MathsGalaxy is production-complete because tests pass. Browser
+  visual QA and performance measurement are separate evidence.
 - Do not claim infinite content. The app has authored lessons and bounded rare
   variants.
 - Do not present stylized orbits as gravitational simulation.
@@ -151,12 +155,14 @@ Highest priority gaps to investigate or improve next:
 - Duplicated navigation systems or mobile button pads alongside gestures.
 - Large refactors that split small modules without improving correctness,
   performance, or comprehension.
-- AI/plugin setup copied from other projects unless it is adapted to AXIOM's
-  static app, mathematical content, browser QA, and existing skills.
+- AI/plugin setup copied from other projects unless it is integrated into
+  MathsGalaxy's static app, mathematical content, browser QA, and existing
+  skills. Ponytail belongs here only as the lean working principle documented
+  in `instructions.md`.
 
 ## Completion Gates
 
-AXIOM is ready for a milestone only when current evidence proves:
+MathsGalaxy is ready for a milestone only when current evidence proves:
 
 - `npm test` passes with real output.
 - The local static server starts and `dist/index.html` loads through HTTP.
@@ -172,22 +178,24 @@ AXIOM is ready for a milestone only when current evidence proves:
 
 ## Adapted Master Prompt
 
-Deliver AXIOM as a polished static Three.js mathematical universe with reliable
+Deliver MathsGalaxy as a polished static Three.js mathematical universe with reliable
 desktop and mobile exploration, honest interactive lessons, local saved
 progress, and bounded rare archive discoveries.
 
 Before acting, read and follow the repository AI setup and Markdown context:
-`AGENTS.md`, `README.md`, `docs/prompt.md`, `docs/RESUME_IN_VSCODE.md`, this
-brief, and relevant project skills. Resume from recorded state instead of
-restarting, contradicting established decisions, or repeating completed work.
+`AGENTS.md`, `docs/context.md`, `docs/design.md`, `docs/instructions.md`,
+`docs/QA_REPORT.md`, `docs/RESUME_IN_VSCODE.md`, and relevant project skills.
+Use `docs/prompt.md` as historical input and this brief as deeper context.
+Resume from recorded state instead of restarting, contradicting established
+decisions, or repeating completed work.
 
 Apply the 80/20 rule: prioritize learner clarity, smooth exploration,
 mathematical correctness, and reliable local behavior. Avoid overengineering,
 duplicated systems, speculative features, unnecessary dependencies, and docs
 that do not keep decisions, commands, evidence, or project status accurate.
-Use the AXIOM lean ladder from `AGENTS.md`: first ask whether the work serves
-the goal, then reuse existing modules and native/static capabilities, then write
-the minimum complete change.
+Use the integrated Ponytail principle from `docs/instructions.md`: first ask
+whether the work serves the goal, then reuse existing modules and native/static
+capabilities, then write the minimum complete change.
 
 Never infer success from code alone. Use real command outputs, local server
 behavior, browser console evidence, responsive inspection, and focused tests.

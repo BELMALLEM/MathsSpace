@@ -17,7 +17,7 @@ body.flying #exploreIntro{transform:translateY(-8px);visibility:hidden}
 #flightHelp{left:5%;bottom:89px;font-size:13px;gap:15px}#flightHelp button{min-height:44px;font-size:13px;border-color:transparent}kbd{font-size:12px}
 #bottomBar{min-height:42px;background:#060b1770;border-color:#ffffff0a;font-size:11px;letter-spacing:1px;padding:8px 32px}
 #bottomBar button{font-size:12px;min-height:32px}
-.marker{left:0;top:0;width:210px;height:50px;padding:6px 8px;border-radius:7px;will-change:transform;transition:background .15s,opacity .2s;contain:layout style}
+.marker{left:0;top:0;width:210px;height:50px;padding:6px 8px;border-radius:7px;will-change:transform;transition:background .15s,opacity .2s;contain:layout style}.frontier-marker{border:1px dashed color-mix(in srgb,var(--c) 38%,transparent);background:rgba(8,15,27,.36)}
 .marker:active{transform:none}.marker .marker-line{width:13px;flex:none}.marker strong{font-size:14px}.marker small{font-size:11px;letter-spacing:.3px;white-space:normal}.marker:hover{background:#101c2bbb}
 #guide{overscroll-behavior:contain}#guideBody{padding-bottom:4px}.control-head{font-size:14px}.control output{font-size:14px}.segmented button{min-height:40px;font-size:13px}.canvas-tools button{min-height:36px;font-size:13px}#depthContent{font-size:15px}#liveExplanation{font-size:15px}.guide-bottom button{font-size:13px;min-height:40px}
 input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{font-size:16px}.dialog-top>button{min-height:44px;min-width:44px}
@@ -27,8 +27,8 @@ input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{fon
 @media(max-width:700px){
  header{padding:calc(12px + env(safe-area-inset-top)) 16px 10px;align-items:center}
  .brand{font-size:18px;letter-spacing:3px}.brand-symbol{font-size:29px}nav{gap:0}nav button{min-width:42px;padding:8px}.brand-sub{display:none}
- #exploreIntro{top:calc(90px + env(safe-area-inset-top));left:22px;max-width:calc(100% - 44px)}
- #exploreIntro .eyebrow{font-size:11px;letter-spacing:1.4px}#exploreIntro h1{font-size:32px;letter-spacing:-1px;margin:11px 0;line-height:1.12}#exploreIntro h1 br{display:none}#exploreIntro h1 em{margin-left:6px}#exploreIntro p{font-size:14px;max-width:280px;margin:10px 0 14px}#exploreIntro .primary{padding:10px 14px;min-height:44px}
+ #exploreIntro{top:calc(82px + env(safe-area-inset-top));left:22px;max-width:calc(100% - 44px)}
+ #exploreIntro .eyebrow{font-size:10px;letter-spacing:1.4px}#exploreIntro h1{font-size:28px;letter-spacing:-.5px;margin:8px 0;line-height:1.1}#exploreIntro h1 br{display:none}#exploreIntro h1 em{margin-left:6px}#exploreIntro p{font-size:12px;line-height:1.45;max-width:245px;margin:7px 0 10px}#exploreIntro .primary{padding:9px 13px;min-height:42px;font-size:13px}
  #position{display:none}#nearby{bottom:calc(112px + env(safe-area-inset-bottom));right:16px;width:calc(100% - 180px);max-width:210px;min-width:142px;padding:12px;background:#0b1625ad}
  #nearby .eyebrow{font-size:10px;letter-spacing:1px}#nearbyList{margin-top:3px}#nearbyList button{min-height:50px;font-size:13px;gap:8px}#nearbyList button:not(:first-child){display:none}#nearbyList small{font-size:11px}
  #touchFlight{left:16px;bottom:calc(112px + env(safe-area-inset-bottom));grid-template-columns:repeat(3,44px);gap:4px}
@@ -55,7 +55,7 @@ input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{fon
 /* Expanded universe: object previews and gesture-only flight. */
 #touchFlight{display:none!important}.touch-hint{display:none}#objectPreview{position:fixed;z-index:8;left:50%;bottom:86px;transform:translateX(-50%);width:min(430px,calc(100% - 32px));padding:21px 24px;background:#0b1727ed;border-color:color-mix(in srgb,var(--c) 35%,#243146);box-shadow:0 20px 70px #0005}
 .preview-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.preview-top .eyebrow{color:var(--c);letter-spacing:1px;font-size:11px}.preview-top button{border:0;font-size:22px;padding:0 8px;min-width:36px;min-height:36px}#objectPreview h2{font-size:26px;font-weight:400;letter-spacing:-.6px;margin:8px 0}#objectPreview p{font-size:15px;color:#d3deeb;margin:8px 0}#objectPreview small{font-size:12px;color:var(--muted)}.preview-actions{display:flex;gap:10px;margin-top:20px}.preview-actions button{flex:1;justify-content:center;min-height:44px}.preview-actions .primary{background:var(--c)}body.selected #nearby{visibility:hidden}
-.atlas-tabs{display:flex;gap:8px;margin-bottom:15px}.atlas-tabs button{min-height:44px;font-size:14px}#atlasFilters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}#atlasFilters label{font-size:12px;color:var(--muted)}#atlasFilters select{display:block;width:100%;padding:10px;margin-top:5px;color:var(--ink);background:#08111d;border:1px solid var(--line);border-radius:7px;min-height:44px;font-size:14px}.atlas-card small{display:block;margin-top:15px;color:var(--c);font-size:12px}#regionGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.region-card{padding:22px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 10%,transparent),transparent)}.region-card h3{font-size:21px;font-weight:400;margin:0 0 8px;color:var(--c)}.region-card p{font-size:14px;color:var(--muted)}.region-card small{display:block;color:var(--muted);font-size:12px}.region-card button{display:block;min-height:44px;margin-top:18px;font-size:14px}
+.frontier-sweep{width:100%;margin-top:10px;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;border-style:dashed}.frontier-sweep span{font-size:13px;color:var(--mint)}.frontier-sweep small{font:10px monospace;color:var(--muted);text-align:right}.atlas-tabs{display:flex;gap:8px;margin-bottom:15px}.atlas-tabs button{min-height:44px;font-size:14px}#atlasFilters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}#atlasFilters label{font-size:12px;color:var(--muted)}#atlasFilters select{display:block;width:100%;padding:10px;margin-top:5px;color:var(--ink);background:#08111d;border:1px solid var(--line);border-radius:7px;min-height:44px;font-size:14px}.atlas-card small{display:block;margin-top:15px;color:var(--c);font-size:12px}#regionGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.region-card{padding:22px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 10%,transparent),transparent)}.region-card.frontier{border-style:dashed;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 7%,transparent),rgba(255,255,255,.015))}.region-card h3{font-size:21px;font-weight:400;margin:0 0 8px;color:var(--c)}.region-card p{font-size:14px;color:var(--muted)}.region-card small{display:block;color:var(--muted);font-size:12px}.region-card button{display:block;min-height:44px;margin-top:18px;font-size:14px}
 @media(pointer:coarse){#flightHelp span{display:none}#flightHelp .touch-hint{display:block;font-size:12px}#flightHelp{flex-wrap:wrap;gap:6px}#flightHelp .touch-hint{width:100%}}
 @media(max-width:700px){#nearby{left:16px;right:16px;bottom:calc(106px + env(safe-area-inset-bottom));width:auto;min-width:0;max-width:none;padding:10px 15px}#nearby .eyebrow{display:none}#nearbyList{margin:0}#nearbyList button{min-height:45px;width:100%}#nearbyList button>span:last-child{display:flex;justify-content:space-between;gap:16px;flex:1;align-items:center}#nearbyList small{margin:0;font-size:10px}#flightHelp{bottom:calc(48px + env(safe-area-inset-bottom));right:16px;left:16px;flex-wrap:nowrap;justify-content:space-between}#flightHelp .touch-hint{width:auto;font-size:11px}#flightHelp button{margin-left:auto}#objectPreview{bottom:calc(52px + env(safe-area-inset-bottom));padding:16px 18px;max-height:calc(100dvh - 120px);overflow:auto}#objectPreview h2{font-size:24px}.preview-actions{margin-top:15px}body.selected #flightHelp{visibility:hidden}#atlasFilters{grid-template-columns:1fr}#regionGrid{grid-template-columns:1fr}.atlas-tabs button{flex:1}.region-card{padding:18px}#position{display:none}.marker small{max-height:28px;overflow:hidden}.preview-top .eyebrow{font-size:10px}}
 @media(max-height:500px){#objectPreview{left:auto;right:20px;transform:none;bottom:55px;width:340px;max-height:calc(100dvh - 135px);overflow:auto}#objectPreview h2{font-size:21px}}
@@ -63,7 +63,7 @@ input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{fon
 /* Living-space encounters stay quiet until the explorer chooses one. */
 #signalBtn{position:fixed;z-index:5;top:144px;right:28px;display:flex;align-items:center;gap:13px;max-width:285px;padding:13px 16px;text-align:left;background:#141b2bbd;border-color:#ddc79440;font-size:14px}
 .signal-symbol{font:28px Georgia;color:#f0d494}.signal-tag{font:10px monospace;letter-spacing:1px;color:#f0d494;margin-left:8px}#signalBtn small{display:block;color:var(--muted);font:11px monospace;margin-top:4px}.source-link{display:block;margin-top:15px;color:var(--mint);font-size:13px;text-decoration:underline;text-underline-offset:4px}body.focus #signalBtn,body.selected #signalBtn{display:none}#expeditionStats{border-bottom:1px solid var(--line);padding-bottom:18px}
-@media(max-width:700px){#signalBtn{top:auto;bottom:calc(178px + env(safe-area-inset-bottom));left:16px;right:16px;max-width:none;padding:9px 13px;min-height:50px;font-size:13px}#signalBtn .signal-symbol{font-size:23px}#signalBtn .signal-tag{margin-left:auto}#signalBtn small{font-size:10px}.region-card small{line-height:1.7}#objectPreview .preview-top .eyebrow{line-height:1.5}}
+@media(max-width:700px){#signalBtn{top:auto;bottom:calc(242px + env(safe-area-inset-bottom));left:16px;right:16px;max-width:none;padding:9px 13px;min-height:50px;font-size:13px}#signalBtn .signal-symbol{font-size:23px}#signalBtn .signal-tag{margin-left:auto}#signalBtn small{font-size:10px}.region-card small{line-height:1.7}#objectPreview .preview-top .eyebrow{line-height:1.5}}
 @media(max-height:600px) and (min-width:701px){#signalBtn{top:100px;padding:9px 12px}#signalBtn small{display:none}}
 
 @media(max-width:700px),(pointer:coarse){#flightHelp button span{display:inline}}
@@ -71,29 +71,37 @@ input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{fon
 /* Resonance route and authored mathematician companion. */
 #routePanel{position:fixed;z-index:5;left:5%;bottom:150px;width:300px;padding:14px 15px;background:#0b1625b8}
 #routePanel h2{font-size:18px;font-weight:400;margin:4px 0 10px;letter-spacing:0}
+#routeLead{font-size:12px;line-height:1.45;color:#d5e0e9;margin:0 0 10px}
+#routeLoop{display:flex;gap:5px;margin:0 0 10px}
+#routeLoop span{flex:1;padding:5px 4px;border:1px solid #ffffff12;color:var(--muted);font:9px monospace;letter-spacing:.6px;text-align:center}
+#routeLoop span.active{color:var(--mint);border-color:#b4f2d555;background:#b4f2d514}
 #routeSteps{display:grid;gap:6px}
 .route-step{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:38px;padding:7px 9px;text-align:left;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 14%,transparent),transparent);border-color:#ffffff12}
 .route-step span{font-size:13px;line-height:1.25}.route-step small{font:10px monospace;color:var(--c);white-space:nowrap}
-#companion{position:fixed;z-index:5;right:28px;bottom:342px;width:285px;padding:14px 16px;background:#101827cf;border-color:#b4f2d530}
+#companion{padding:14px 0 0;border-top:1px solid var(--line);margin-top:14px}
+#routePanel{max-height:calc(100dvh - 510px);overflow-y:auto;scrollbar-width:thin}
+#routePanel>summary{cursor:pointer;min-height:44px;padding:10px 0;color:var(--mint);font-size:13px}
+#routePanel>summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+#routePanel:not([open]){padding-top:0;padding-bottom:0}
 .companion-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:11px monospace;letter-spacing:1.5px;color:var(--mint)}
 .companion-top button{min-height:34px;padding:5px 9px;font-size:11px;border-color:#b4f2d533;color:var(--mint)}
 #companion p{margin:10px 0 0;color:#d5e0e9;font-size:13px;line-height:1.55}
 .journal-status{display:inline-block;margin-top:8px;color:var(--mint);font:11px monospace;letter-spacing:1px}
 #relayTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
-#relayTask h3{font-size:16px;margin:0 0 10px}
+#relayTask h2{font-size:16px;margin:0 0 10px}
 #relayTask input{display:block;width:100%;margin-top:8px;padding:10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px}
 #relayTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
 #relayFeedback{color:var(--mint)}
 #courseTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
-#courseTask h3{font-size:16px;margin:0 0 10px}
+#courseTask h2{font-size:16px;margin:0 0 10px}
 #courseTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
 #courseFeedback{color:var(--mint)}
 #recursionTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
-#recursionTask h3{font-size:16px;margin:0 0 10px}
+#recursionTask h2{font-size:16px;margin:0 0 10px}
 #recursionTask input{display:block;width:100%;margin-top:8px;padding:10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px}
 #recursionTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
 #goldenTask{border-top:1px solid var(--line);padding:16px 0;margin:16px 0;font-size:13px}
-#goldenTask h3{font-size:16px;margin:0 0 10px}
+#goldenTask h2{font-size:16px;margin:0 0 10px}
 #goldenTask button{margin-bottom:8px;min-height:44px;max-width:100%;white-space:normal}
 #recursionFeedback{color:var(--mint)}
 @media(min-width:701px){
@@ -108,14 +116,28 @@ input[type=range]{min-height:30px}dialog{overscroll-behavior:contain}#search{fon
 .companion-top #companionDismiss{flex:none;width:44px;min-height:44px;padding:0;font-size:20px}
 .companion-top span{margin-right:auto}
 body.focus #routePanel,body.focus #companion,body.selected #routePanel{display:none}
-@media(max-width:1000px) and (min-width:701px){#routePanel{left:24px;width:270px}#companion{right:20px;width:260px;bottom:320px}}
+@media(max-width:1000px) and (min-width:701px){#routePanel{left:24px;width:270px}}
 @media(max-height:600px) and (min-width:701px){#routePanel,#companion{display:none}}
 @media(max-width:700px){
- #routePanel{top:calc(338px + env(safe-area-inset-top));bottom:auto;left:16px;right:16px;width:auto;padding:10px 12px}
- #routePanel h2{display:none}#routeSteps{grid-template-columns:1fr 1fr;gap:5px}.route-step{min-height:33px;padding:6px 8px}.route-step span{font-size:12px}.route-step small{font-size:9px}
- #companion{top:calc(468px + env(safe-area-inset-top));bottom:auto;left:16px;right:16px;width:auto;padding:10px 12px}
+ #routePanel{top:calc(246px + env(safe-area-inset-top));bottom:auto;left:16px;right:16px;width:auto;padding:0 12px;max-height:calc(100dvh - 310px - env(safe-area-inset-top) - env(safe-area-inset-bottom));background:#0b1625ed}
+ #routePanel h2{display:none}#routeLead{font-size:11px;margin-bottom:7px}#routeLoop{margin-bottom:7px}#routeLoop span{font-size:8px;padding:4px 2px}#routeSteps{grid-template-columns:1fr 1fr;gap:5px}.route-step{min-height:33px;padding:6px 8px}.route-step span{font-size:12px}.route-step small{font-size:9px}
+ #companion{padding:10px 0;margin-top:10px}
  #companion p{font-size:12px;margin-top:7px}.companion-top button{min-height:32px}
  body.selected #companion{display:none}
 }
-@media(max-height:700px) and (max-width:700px){#routePanel,#companion{display:none}}
+@media(max-height:700px) and (max-width:700px){#routePanel{top:calc(200px + env(safe-area-inset-top));max-height:calc(100dvh - 260px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}}
 @media(max-width:700px){body.flying #exploreIntro,body.flying #routePanel,body.flying #companion{display:none!important}}
+
+@media(max-width:700px){
+ body.focus #guideBody{display:flex;flex-direction:column}
+ body.focus #guideBody>#relayTask,
+ body.focus #guideBody>#courseTask,
+ body.focus #guideBody>#recursionTask,
+ body.focus #guideBody>#goldenTask{order:-1}
+ body.focus #guideBody>#miraLesson{order:0}
+ body.focus #guideBody>#lessonControls{order:1}
+ body.focus #guideBody>#liveExplanation{order:2}
+ body.focus #guideBody>.segmented{order:3}
+ body.focus #guideBody>#depthContent{order:4}
+ body.focus #guideBody>.guide-bottom{order:5}
+}
